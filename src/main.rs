@@ -1,7 +1,7 @@
+mod colors;
 mod consts;
 mod effect;
 mod particle;
-mod colors;
 
 use consts::{HEIGHT, PARTICLES_AMOUNT, WIDTH};
 use effect::Effect;
@@ -77,15 +77,15 @@ impl EventHandler for MyGame {
                 self.effect.init(PARTICLES_AMOUNT);
             }
             if keycode == KeyCode::I {
-                if self.effect.color_index < self.effect.colors.len()-1 {
-                    self.effect.color_index+=1;
+                if self.effect.color_index < self.effect.colors.len() - 1 {
+                    self.effect.color_index += 1;
                     self.effect.reset();
                     self.effect.init(PARTICLES_AMOUNT);
                 }
             }
             if keycode == KeyCode::U {
                 if self.effect.color_index > 0 {
-                    self.effect.color_index-=1;
+                    self.effect.color_index -= 1;
                     self.effect.reset();
                     self.effect.init(PARTICLES_AMOUNT);
                 }
